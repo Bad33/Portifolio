@@ -4,109 +4,166 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nikhil Chaudhary — Portfolio</title>
-  <meta name="description" content="Nikhil Chaudhary — AI/ML engineer and full‑stack developer. Building robust, data‑driven products with Python, TypeScript, and modern ML.">
-  <meta name="theme-color" content="#0ea5e9">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Nikhil Chaudhary — AI/ML engineer & full‑stack developer. Building future‑ready, data‑driven products with pragmatic ML and clean UX.">
+  <meta name="theme-color" content="#00e5ff">
+  <link rel="icon" href="./assets/favicon.png">
+  <link rel="manifest" href="./site.webmanifest">
   <meta property="og:title" content="Nikhil Chaudhary — Portfolio">
-  <meta property="og:description" content="AI/ML engineer & full‑stack developer. I build robust, data‑driven products.">
+  <meta property="og:description" content="AI/ML engineer & full‑stack dev. I build robust, data‑driven systems.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="./assets/og-image.png">
   <meta property="og:url" content="https://chaudharynikhil.com/">
-  <meta property="og:image" content="https://dummyimage.com/1200x630/020617/ffffff&text=Nikhil+Chaudhary">
   <meta name="twitter:card" content="summary_large_image">
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Nikhil Chaudhary",
-    "url": "https://chaudharynikhil.com",
-    "email": "mailto:chaudharyn582@gmail.com",
-    "telephone": "+1-605-592-8818",
-    "jobTitle": "AI/ML Engineer & Full‑Stack Developer",
-    "affiliation": {
-      "@type": "CollegeOrUniversity",
-      "name": "South Dakota State University"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/in/nikhilchaudhary14ry",
-      "https://github.com/Bad33",
-      "https://www.kaggle.com/badasss"
-    ]
-  }
-  </script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Orbitron:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg: #0b1020;
-      --panel: #0f172a;
-      --muted: #94a3b8;
-      --text: #e5e7eb;
-      --brand: #0ea5e9;
-      --brand-2: #22d3ee;
-      --accent: #38bdf8;
-      --ring: 0 0 0 2px var(--brand);
-      --radius: 16px;
-      --shadow: 0 10px 40px rgba(2,6,23,0.6);
+      --bg:#050814;
+      --panel:#0b1224;
+      --muted:#9fb0c6;
+      --text:#e6eefb;
+      --brand:#00e5ff;
+      --brand2:#7cf9d2;
+      --accent:#6bf0ff;
+      --radius:18px;
       --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      --sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      --sans: "Space Grotesk", Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      --display: "Orbitron", var(--sans);
+      --shadow: 0 12px 50px rgba(0,229,255,0.12), inset 0 0 0 1px rgba(124,249,210,0.08);
+      --glass: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      --border: 1px solid rgba(124,249,210,0.22);
     }
-
-    @media (prefers-color-scheme: light) {
-      :root{ --bg:#f8fafc; --panel:#ffffff; --text:#0f172a; --muted:#475569; --shadow:0 16px 40px rgba(2,6,23,0.08); }
+    [data-theme="light"]{
+      --bg:#f7fbff; --panel:#ffffff; --text:#0b1224; --muted:#4b5563;
+      --shadow:0 12px 40px rgba(2,6,23,0.08), inset 0 0 0 1px rgba(2,6,23,0.06);
+      --glass: linear-gradient(180deg, rgba(2,6,23,0.04), rgba(2,6,23,0.02));
+      --border: 1px solid rgba(2,6,23,0.12);
     }
-
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:radial-gradient(1200px 800px at 10% 10%,rgba(56,189,248,0.12),transparent 60%), radial-gradient(1200px 800px at 90% 20%,rgba(14,165,233,0.12),transparent 60%), var(--bg); color:var(--text); font-family:var(--sans);}
-    a{color:var(--brand)}
-    a:hover{color:var(--brand-2)}
+    html{scroll-behavior:smooth}
+    body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:var(--sans)}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{color:var(--accent)}
 
-    .container{max-width:1120px;margin:0 auto;padding:24px}
-    .nav{display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:linear-gradient(180deg, rgba(11,16,32,0.9), rgba(11,16,32,0.6) 60%, transparent); backdrop-filter:saturate(1.4) blur(8px); z-index:50; padding:12px 24px; border-bottom:1px solid rgba(148,163,184,0.15)}
-    .nav a.brand{display:flex;gap:10px;align-items:center;font-weight:800; letter-spacing:0.2px; text-decoration:none; color:var(--text)}
-    .brand-badge{display:grid;place-items:center; width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2)); box-shadow:var(--shadow); font-weight:900}
-    .nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
-    .nav ul a{color:var(--text);text-decoration:none;opacity:0.9;padding:8px 12px;border-radius:10px}
-    .nav ul a:hover{background:rgba(148,163,184,0.12)}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:14px;background:linear-gradient(135deg,var(--brand),var(--accent)); color:#06111f; font-weight:700; text-decoration:none; box-shadow:var(--shadow)}
-    .btn:hover{transform:translateY(-1px);}
-    .btn.ghost{background:transparent;color:var(--text);border:1px solid rgba(148,163,184,0.25)}
-    .grid{display:grid;gap:16px}
-    .hero{padding:80px 24px}
-    .hero h1{font-size:clamp(32px,5vw,56px);line-height:1.05;margin:0 0 12px}
-    .hero p{font-size:clamp(16px,2.4vw,18px);color:var(--muted);margin:0 0 28px}
-    .hero .actions{display:flex;gap:12px;flex-wrap:wrap}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.01)); border:1px solid rgba(148,163,184,0.18); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)}
+    .skip{position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden}
+    .skip:focus{position:fixed; left:16px; top:16px; width:auto; height:auto; background:#000; color:#fff; padding:8px 12px; border-radius:10px; z-index:999}
+
+    .bg{
+      position:fixed; inset:0; z-index:-2; overflow:hidden; pointer-events:none;
+      background:
+        radial-gradient(900px 500px at 10% 20%, rgba(0,229,255,0.20), transparent 60%),
+        radial-gradient(900px 500px at 90% 10%, rgba(124,249,210,0.18), transparent 60%),
+        radial-gradient(700px 400px at 50% 90%, rgba(107,240,255,0.14), transparent 60%);
+    }
+    .blob{position:absolute; width:58vmax; height:58vmax; filter:blur(70px); opacity:.35; border-radius:50%;
+      background: conic-gradient(from 0deg, rgba(0,229,255,.55), rgba(124,249,210,.35), rgba(0,229,255,.55));
+      animation: blob 26s ease-in-out infinite alternate; mix-blend-mode:screen;
+    }
+    .blob.one{top:-24vmax; left:-12vmax}
+    .blob.two{right:-22vmax; bottom:-18vmax; animation-duration: 32s}
+    @keyframes blob{from{ transform: translate(-2%,-2%) rotate(0.25turn) scale(1)} to{ transform: translate(2%,2%) rotate(1turn) scale(1.06)}}
+
+    /* starfield */
+    canvas#stars{position:fixed; inset:0; z-index:-1; pointer-events:none; opacity:.35}
+
+    .container{max-width:1160px;margin:0 auto;padding:24px}
+    .nav{display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:40;
+      background:linear-gradient(180deg, rgba(5,8,20,0.9), rgba(5,8,20,0.55) 60%, transparent);
+      backdrop-filter: blur(10px) saturate(1.4); border-bottom:1px solid rgba(124,249,210,0.14); padding:10px 20px;
+    }
+    [data-theme="light"] .nav{ background:linear-gradient(180deg, rgba(247,251,255,0.9), rgba(247,251,255,0.55) 60%, transparent); border-bottom:1px solid rgba(2,6,23,0.12) }
+    .brand{display:flex;gap:12px;align-items:center;font-weight:800;color:var(--text)}
+    .brand-badge{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;
+      background:linear-gradient(135deg,var(--brand),var(--brand2)); color:#041018; font-family:var(--display); box-shadow: var(--shadow);
+    }
+    .nav ul{display:flex;gap:14px;margin:0;padding:0;list-style:none}
+    .nav a{padding:8px 12px;border-radius:12px;color:var(--text);opacity:.92}
+    .nav a:hover{background:rgba(124,249,210,0.10)}
+
+    .toggle{display:inline-flex; gap:8px; align-items:center; border-radius:12px; border:var(--border); padding:6px 10px; cursor:pointer; user-select:none}
+    .toggle span{font-family:var(--mono); font-size:12px; opacity:.8}
+
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:13px 18px;border-radius:16px;
+      background: radial-gradient(120% 120% at 30% 20%, var(--brand), var(--accent));
+      color:#041018; font-weight:800; letter-spacing:.3px; text-transform:uppercase; font-family:var(--display);
+      box-shadow: 0 8px 28px rgba(0,229,255,0.35), 0 0 0 2px rgba(0,229,255,0.25) inset;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .btn:hover{ transform: translateY(-2px); box-shadow: 0 12px 36px rgba(0,229,255,0.45) }
+    .btn.ghost{ background: transparent; color: var(--text); box-shadow: inset 0 0 0 2px rgba(124,249,210,0.28) }
+
+    .hero{display:grid; grid-template-columns: 1.2fr .9fr; gap:24px; align-items:center; padding:72px 24px}
+    @media (max-width: 960px){ .hero{ grid-template-columns:1fr; padding:48px 16px } }
+    h1{font-size: clamp(36px, 6vw, 64px); line-height:1.02; margin:.1em 0 .2em; letter-spacing:.3px; font-weight:800}
+    .grad{background: linear-gradient(90deg, var(--brand), var(--brand2)); -webkit-background-clip:text; background-clip:text; color:transparent}
+    .tagline{font-family:var(--display); letter-spacing:1.6px; color:var(--muted); text-transform:uppercase; font-size:13px}
+    p.lead{font-size: clamp(16px, 2.2vw, 20px); color: var(--muted); margin: 10px 0 24px}
+
+    .headshot-wrap{position:relative; aspect-ratio:1/1; max-width:440px; margin:0 auto; border-radius:28px; padding:10px;
+      background: var(--glass); border:var(--border); box-shadow: var(--shadow);
+    }
+    .headshot{ width:100%; height:100%; border-radius:24px; object-fit:cover;
+      mask-image: radial-gradient(80% 80% at 50% 45%, #000 60%, transparent 100%);
+      transform: translateZ(0);
+    }
+    .ring{position:absolute; inset:-8px; border-radius:32px; pointer-events:none;
+      background: conic-gradient(from 90deg, rgba(0,229,255,.7), rgba(124,249,210,.4), rgba(0,229,255,.7));
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude;
+      padding:2px; animation: spin 16s linear infinite; opacity:.6; }
+    @keyframes spin{ to{ transform: rotate(1turn) } }
+
+    .card{background: var(--glass); border:var(--border); border-radius:var(--radius); padding:22px; box-shadow: var(--shadow);
+      position:relative; overflow:hidden;
+    }
+    .card:before{content:""; position:absolute; inset:-1px; padding:1px; border-radius:inherit;
+      background: linear-gradient(180deg, rgba(56,189,248,.4), transparent);
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask-composite:exclude;
+      pointer-events:none;
+    }
+    .grid{display:grid; gap:16px}
     .section{padding:26px 0}
-    h2.section-title{font-size:20px;text-transform:uppercase;letter-spacing:1.4px;color:var(--muted);margin:0 0 12px}
+    h2.section-title{font-family:var(--display); font-size:14px; letter-spacing:1.8px; text-transform:uppercase; color:var(--muted); margin:0 0 12px}
     .skills{grid-template-columns: repeat(auto-fit, minmax(220px,1fr));}
-    .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(148,163,184,0.12);border:1px solid rgba(148,163,184,0.2); padding:8px 12px;border-radius:999px;font-size:14px;font-family:var(--mono)}
+    .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(124,249,210,0.10);border:1px solid rgba(124,249,210,0.25); padding:8px 12px;border-radius:999px;font-size:14px;font-family:var(--mono)}
+
     .timeline{display:grid;gap:12px}
-    .item{display:grid;gap:6px}
     .item h3{margin:0;font-size:18px}
     .item .meta{color:var(--muted);font-size:14px}
     .projects{grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));}
     .project h3{margin:10px 0 6px}
     .project p{color:var(--muted);margin:0 0 8px}
-    .footer{padding:20px 0 40px;color:var(--muted);font-size:14px;text-align:center}
-    .kbd{font-family:var(--mono);font-size:12px;background:rgba(148,163,184,0.18);padding:2px 6px;border-radius:6px;border:1px solid rgba(148,163,184,0.25)}
-    .split{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
-    @media (max-width:900px){ .split{grid-template-columns:1fr} }
-    .contact{display:grid;gap:10px}
-    .contact a{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-    .badge{display:inline-block;font-weight:700;font-size:12px;letter-spacing:.6px;padding:6px 10px;border-radius:999px;color:#06111f;background:linear-gradient(135deg,var(--brand),var(--brand-2));}
-    .list-plain{margin:0;padding:0;list-style:none;display:grid;gap:8px}
-    .muted{color:var(--muted)}
-    .mono{font-family:var(--mono)}
-    .sticky-card{position:relative;overflow:hidden}
-    .sticky-card:before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(180deg,rgba(56,189,248,0.6),transparent);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
-    .mini{font-size:13px}
-  </style>
-</head>
+    .kbd{font-family:var(--mono);font-size:12px;background:rgba(124,249,210,0.18);padding:2px 6px;border-radius:6px;border:1px solid rgba(124,249,210,0.25)}
 
+    .footer{padding:20px 0 40px;color:var(--muted);font-size:14px;text-align:center}
+
+    /* reveal */
+    [data-reveal]{ opacity:0; transform: translateY(14px) scale(.98); transition: opacity .6s ease, transform .6s ease }
+    .reveal-in{ opacity:1; transform: none }
+    @media (prefers-reduced-motion: reduce){
+      .blob,.ring,[data-reveal],.btn:hover{ animation:none !important; transition:none !important }
+      canvas#stars{ display:none }
+    }
+  </style>
+  <link rel="canonical" href="https://chaudharynikhil.com/">
+
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "Person", "name": "Nikhil Chaudhary", "url": "https://chaudharynikhil.com", "email": "mailto:chaudharyn582@gmail.com", "telephone": "+1-605-592-8818", "jobTitle": "AI/ML Engineer & Full-Stack Developer", "affiliation": {"@type": "CollegeOrUniversity", "name": "South Dakota State University"}, "sameAs": ["https://www.linkedin.com/in/nikhilchaudhary14ry", "https://github.com/Bad33", "https://www.kaggle.com/badasss"]}
+  </script>
+</head>
 <body>
+  <a href="#main" class="skip">Skip to content</a>
+
+  <div class="bg" aria-hidden="true">
+    <div class="blob one"></div>
+    <div class="blob two"></div>
+    <canvas id="stars"></canvas>
+  </div>
+
   <header class="nav">
     <a href="#" class="brand">
       <span class="brand-badge" aria-hidden="true">NC</span>
@@ -122,39 +179,35 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <button id="themeBtn" class="toggle" aria-label="Toggle color theme"><span>Theme</span>🌓</button>
   </header>
 
-  <main class="container">
-    <section class="hero split">
-      <div>
-        <span class="badge">AI/ML • Full‑Stack • Cloud</span>
-        <h1>Building data‑driven products that ship.</h1>
-        <p>I'm Nikhil, an AI/ML engineer and full‑stack developer. I blend modern machine learning with pragmatic software engineering to deliver robust, user‑focused systems.</p>
-        <div class="actions">
+  <main id="main" class="container">
+    <section class="hero">
+      <div data-reveal>
+        <div class="tagline">AI/ML • Full-Stack • Cloud</div>
+        <h1>Nikhil Chaudhary — <span class="grad">Future‑ready</span> products, powered by data.</h1>
+        <p class="lead">I'm Nikhil, an AI/ML engineer and full‑stack dev blending modern ML with pragmatic software engineering. I craft robust, user‑focused systems with a dash of neon.</p>
+        <div class="actions" style="display:flex;gap:12px;flex-wrap:wrap">
           <a class="btn" href="./assets/Nikhil_Resume.pdf" download>Download résumé</a>
-          <a class="btn ghost" href="#contact">Contact me</a>
+          <a class="btn ghost" href="#projects">See projects</a>
         </div>
-        <p class="mini muted" style="margin-top:14px">Open to AI/ML Engineer • Data Scientist • Software Engineer roles & internships.</p>
+        <p class="muted" style="margin-top:14px">Open to AI/ML Engineer • Data Scientist • Software Engineer roles & internships.</p>
       </div>
-      <aside class="card sticky-card" aria-label="Quick facts">
-        <h2 class="section-title">Quick facts</h2>
-        <ul class="list-plain">
-          <li><span class="mono muted mini">Now</span><br><strong>Master’s CS @ South Dakota State University</strong></li>
-          <li><span class="mono muted mini">Prev</span><br><strong>Software Developer Engineer @ Siemens</strong></li>
-          <li><span class="mono muted mini">Focus</span><br><strong>ML systems, vision & NLP, data platforms</strong></li>
-          <li><span class="mono muted mini">Stack</span><br><strong>Python, TypeScript, PyTorch, TensorFlow</strong></li>
-        </ul>
+      <aside class="headshot-wrap" data-reveal aria-label="Portrait">
+        <span class="ring" aria-hidden="true"></span>
+        <img class="headshot" src="./assets/headshot.jpg" alt="Portrait of Nikhil Chaudhary" loading="lazy" width="1000" height="1000">
       </aside>
     </section>
 
-    <section id="about" class="section">
+    <section id="about" class="section" data-reveal>
       <h2 class="section-title">About</h2>
       <div class="card">
-        <p>AI/ML professional with proven expertise in advanced data analysis, deep learning, and software engineering. Skilled in Python, TypeScript, and cloud platforms, delivering robust data‑driven solutions to complex business challenges. I love transforming messy real‑world data into reliable, production‑ready features and models.</p>
+        <p>AI/ML professional with proven expertise in advanced data analysis, deep learning, and software engineering. Skilled in Python, TypeScript, and cloud platforms, I deliver robust data‑driven solutions to complex business challenges. I enjoy transforming messy real‑world data into reliable, production‑ready features and models.</p>
       </div>
     </section>
 
-    <section id="skills" class="section">
+    <section id="skills" class="section" data-reveal>
       <h2 class="section-title">Skills</h2>
       <div class="grid skills">
         <div class="card">
@@ -179,11 +232,11 @@
           <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px">
             <span class="pill">PyTorch</span>
             <span class="pill">TensorFlow</span>
-            <span class="pill">scikit‑learn</span>
+            <span class="pill">scikit-learn</span>
             <span class="pill">pandas • NumPy</span>
             <span class="pill">Graph analytics (Neo4j)</span>
             <span class="pill">GNNs</span>
-            <span class="pill">NLP • LLMs (GPT, BERT)</span>
+            <span class="pill">NLP • LLMs</span>
             <span class="pill">Prompt engineering</span>
             <span class="pill">Model eval & perf</span>
           </div>
@@ -191,7 +244,7 @@
       </div>
     </section>
 
-    <section id="experience" class="section">
+    <section id="experience" class="section" data-reveal>
       <h2 class="section-title">Experience</h2>
       <div class="timeline">
         <article class="card item">
@@ -224,7 +277,7 @@
       </div>
     </section>
 
-    <section id="projects" class="section">
+    <section id="projects" class="section" data-reveal>
       <h2 class="section-title">Projects</h2>
       <div class="grid projects">
         <article class="card project">
@@ -264,7 +317,7 @@
       </div>
     </section>
 
-    <section id="education" class="section">
+    <section id="education" class="section" data-reveal>
       <h2 class="section-title">Education</h2>
       <div class="grid">
         <div class="card">
@@ -278,35 +331,22 @@
       </div>
     </section>
 
-    <section class="section">
-      <h2 class="section-title">Certifications & Highlights</h2>
-      <div class="grid">
-        <div class="card">
-          <ul class="list-plain">
-            <li><strong>Python 101 for Data Science</strong> — CognitiveClass (PY0101EN)</li>
-            <li><strong>HackerRank: Python (Basic)</strong> — <a href="https://www.hackerrank.com/certificates/55256e1bbb87" target="_blank" rel="noopener">View certificate</a></li>
-            <li>AI/ML Workshop on Coronavirus (2020)</li>
-            <li>Ethical Hacking Workshop — IIT Kharagpur (2018)</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
+    <section id="contact" class="section" data-reveal>
       <h2 class="section-title">Contact</h2>
       <div class="card contact">
-        <div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center">
           <a href="mailto:chaudharyn582@gmail.com" class="pill" aria-label="Email"><span aria-hidden="true">✉️</span>chaudharyn582@gmail.com</a>
+          <button id="copyBtn" class="pill" type="button">Copy email</button>
         </div>
-        <div>
-          <a href="tel:+16055928818" class="pill" aria-label="Phone"><span aria-hidden="true">📞</span>+1 (605) 592‑8818</a>
+        <div style="margin-top:8px">
+          <a href="tel:+16055928818" class="pill" aria-label="Phone"><span aria-hidden="true">📞</span>+1 (605) 592-8818</a>
         </div>
-        <div>
-          <a href="https://www.linkedin.com/in/nikhilchaudhary14ry" target="_blank" rel="noopener" class="pill" aria-label="LinkedIn"><span aria-hidden="true">🔗</span>LinkedIn</a>
-          <a href="https://github.com/Bad33" target="_blank" rel="noopener" class="pill" aria-label="GitHub"><span aria-hidden="true">💻</span>GitHub</a>
-          <a href="https://www.kaggle.com/badasss" target="_blank" rel="noopener" class="pill" aria-label="Kaggle"><span aria-hidden="true">📊</span>Kaggle</a>
+        <div style="margin-top:8px">
+          <a href="https://www.linkedin.com/in/nikhilchaudhary14ry" rel="me" target="_blank" rel="noopener" class="pill" aria-label="LinkedIn"><span aria-hidden="true">🔗</span>LinkedIn</a>
+          <a href="https://github.com/Bad33" rel="me" target="_blank" rel="noopener" class="pill" aria-label="GitHub"><span aria-hidden="true">💻</span>GitHub</a>
+          <a href="https://www.kaggle.com/badasss" rel="me" target="_blank" rel="noopener" class="pill" aria-label="Kaggle"><span aria-hidden="true">📊</span>Kaggle</a>
         </div>
-        <p class="muted mini">Prefer email. I usually reply within a day.</p>
+        <p class="muted">Prefer email. I usually reply within a day.</p>
       </div>
     </section>
 
@@ -316,8 +356,19 @@
   </main>
 
   <script>
-    // Update year
+    // Year
     document.getElementById("y").textContent = new Date().getFullYear();
+
+    // Theme toggle with persistence
+    const root = document.documentElement;
+    const themeBtn = document.getElementById("themeBtn");
+    const saved = localStorage.getItem("theme");
+    if(saved){ root.setAttribute("data-theme", saved); }
+    themeBtn.addEventListener("click", ()=>{
+      const cur = root.getAttribute("data-theme")==="light" ? "dark" : "light";
+      root.setAttribute("data-theme", cur);
+      localStorage.setItem("theme", cur);
+    });
 
     // Keyboard quick-jump
     const sections = ["about","skills","experience","projects","education","contact"];
@@ -328,6 +379,52 @@
         if(id && sections.includes(id.toLowerCase())) document.getElementById(id).scrollIntoView({behavior:"smooth"});
       }
     });
+
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('reveal-in'); io.unobserve(e.target);} });
+    }, {threshold:0.14});
+    document.querySelectorAll("[data-reveal]").forEach(el=> io.observe(el));
+
+    // Copy email
+    const copyBtn = document.getElementById("copyBtn");
+    copyBtn?.addEventListener("click", async ()=>{
+      try{
+        await navigator.clipboard.writeText("chaudharyn582@gmail.com");
+        copyBtn.textContent = "Copied ✓";
+        setTimeout(()=> copyBtn.textContent = "Copy email", 1600);
+      }catch(e){ alert("Could not copy, please copy manually."); }
+    });
+
+    // Starfield
+    const cnv = document.getElementById("stars");
+    const ctx = cnv.getContext("2d");
+    const DPR = Math.min(devicePixelRatio || 1, 2);
+    let stars = [];
+    function resize(){
+      cnv.width = innerWidth * DPR;
+      cnv.height = innerHeight * DPR;
+      stars = Array.from({length: Math.floor((innerWidth*innerHeight)/12000)}, ()=> ({
+        x: Math.random()*cnv.width,
+        y: Math.random()*cnv.height,
+        z: Math.random()*0.8 + 0.2,
+        s: Math.random()*1.8 + 0.2
+      }));
+    }
+    function draw(){
+      ctx.clearRect(0,0,cnv.width,cnv.height);
+      for(const st of stars){
+        const parallax = (scrollY/2000) * st.z;
+        ctx.globalAlpha = 0.6*st.z;
+        ctx.fillStyle = "#aefcff";
+        ctx.beginPath();
+        ctx.arc(st.x, st.y + parallax*DPR, st.s*DPR, 0, Math.PI*2);
+        ctx.fill();
+      }
+      requestAnimationFrame(draw);
+    }
+    resize(); draw();
+    addEventListener("resize", resize);
 
     // Smooth-scroll for nav links
     document.querySelectorAll('a[href^="#"]').forEach(a=>{

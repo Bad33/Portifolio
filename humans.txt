@@ -1,0 +1,7 @@
+/* TEAM */
+Developer: Nikhil Chaudhary
+Site: https://chaudharynikhil.com
+Contact: chaudharyn582@gmail.com
+
+/* THANKS */
+Built with clean HTML/CSS and lots of ☕
