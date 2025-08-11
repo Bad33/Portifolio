@@ -4,139 +4,107 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nikhil Chaudhary — Portfolio</title>
-  <meta name="description" content="Nikhil Chaudhary — AI/ML engineer and full-stack developer. Building robust, data-driven products with Python, TypeScript, and modern ML.">
-  <meta name="theme-color" content="#00e5ff">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Orbitron:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Nikhil Chaudhary — AI/ML engineer & full‑stack developer. Anime-inspired portfolio with waves, halftone textures, and bold comic typography.">
+  <meta name="theme-color" content="#0ea5e9">
   <meta property="og:title" content="Nikhil Chaudhary — Portfolio">
-  <meta property="og:description" content="AI/ML engineer & full-stack developer. I build robust, data-driven products.">
+  <meta property="og:description" content="AI/ML engineer & full‑stack developer. I build robust, data-driven systems.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chaudharynikhil.com/">
-  <meta property="og:image" content="https://dummyimage.com/1200x630/020617/ffffff&text=Nikhil+Chaudhary">
   <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts: bold comic + rounded sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
     :root{
-      --bg:#050814;
-      --panel:#0b1224;
-      --muted:#9fb0c6;
-      --text:#e6eefb;
-      --brand:#00e5ff;
-      --brand2:#7cf9d2;
-      --accent:#6bf0ff;
+      --bg:#f0f7ff;
+      --ink:#0b1324;
+      --muted:#4b5563;
+      --brand:#0ea5e9;  /* sea blue */
+      --sun:#ffb703;    /* warm sun */
+      --sand:#f4e7c1;   /* parchment */
+      --accent:#ef4444; /* punchy red */
+      --mono:"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+      --display:"Bangers", system-ui, -apple-system;
+      --rounded:"M PLUS Rounded 1c", system-ui, -apple-system;
       --radius:18px;
-      --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      --sans: "Space Grotesk", Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      --display: "Orbitron", var(--sans);
-      --shadow: 0 12px 50px rgba(0,229,255,0.12), inset 0 0 0 1px rgba(124,249,210,0.08);
-    }
-    @media (prefers-color-scheme: light){
-      :root{ --bg:#f7fbff; --panel:#ffffff; --text:#0b1224; --muted:#4b5563; --shadow:0 12px 40px rgba(2,6,23,0.08), inset 0 0 0 1px rgba(2,6,23,0.06) }
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:var(--sans)}
-    a{color:var(--brand);text-decoration:none}
-    a:hover{color:var(--accent)}
-    .bg{
-      position:fixed; inset:0; z-index:-1; overflow:hidden; pointer-events:none;
-      background:
-        radial-gradient(900px 500px at 10% 20%, rgba(0,229,255,0.20), transparent 60%),
-        radial-gradient(900px 500px at 90% 10%, rgba(124,249,210,0.18), transparent 60%),
-        radial-gradient(700px 400px at 50% 90%, rgba(107,240,255,0.14), transparent 60%);
-    }
-    .blob{position:absolute; width:48vmax; height:48vmax; filter:blur(60px); opacity:.35; border-radius:50%;
-      background: conic-gradient(from 0deg, rgba(0,229,255,.6), rgba(124,249,210,.4), rgba(0,229,255,.6));
-      animation: floaty 22s ease-in-out infinite alternate;
-      mix-blend-mode:screen;
-    }
-    .blob.one{top:-20vmax; left:-10vmax}
-    .blob.two{right:-18vmax; bottom:-10vmax; animation-duration: 28s}
-    @keyframes floaty{ from{ transform: translateY(-2%) translateX(-2%) rotate(0.5turn) } to{ transform: translateY(2%) translateX(2%) rotate(1turn) } }
-    .container{max-width:1160px;margin:0 auto;padding:24px}
-    .nav{display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:40;
-      background:linear-gradient(180deg, rgba(5,8,20,0.9), rgba(5,8,20,0.55) 60%, transparent);
-      backdrop-filter: blur(10px) saturate(1.4); border-bottom:1px solid rgba(124,249,210,0.14); padding:10px 20px;
-    }
-    .brand{display:flex;gap:12px;align-items:center;font-weight:800;color:var(--text)}
-    .brand-badge{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;
-      background:linear-gradient(135deg,var(--brand),var(--brand2)); color:#041018; font-family:var(--display); box-shadow: var(--shadow);
-    }
-    .nav ul{display:flex;gap:14px;margin:0;padding:0;list-style:none}
-    .nav a{padding:8px 12px;border-radius:12px;color:var(--text);opacity:.92}
-    .nav a:hover{background:rgba(124,249,210,0.10)}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:13px 18px;border-radius:16px;
-      background: radial-gradient(120% 120% at 30% 20%, var(--brand), var(--accent));
-      color:#041018; font-weight:800; letter-spacing:.3px; text-transform:uppercase; font-family:var(--display);
-      box-shadow: 0 8px 28px rgba(0,229,255,0.35), 0 0 0 2px rgba(0,229,255,0.25) inset;
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
-    .btn:hover{ transform: translateY(-2px); box-shadow: 0 12px 36px rgba(0,229,255,0.45) }
-    .btn.ghost{ background: transparent; color: var(--text); box-shadow: inset 0 0 0 2px rgba(124,249,210,0.28) }
-    .hero{display:grid; grid-template-columns: 1.2fr .9fr; gap:24px; align-items:center; padding:72px 24px}
-    @media (max-width: 960px){ .hero{ grid-template-columns:1fr; padding:48px 16px } }
-    h1{font-size: clamp(36px, 6vw, 64px); line-height:1.02; margin:.1em 0 .2em; letter-spacing:.3px; font-weight:800}
-    .tagline{font-family:var(--display); letter-spacing:1.6px; color:var(--muted); text-transform:uppercase; font-size:13px}
-    p.lead{font-size: clamp(16px, 2.2vw, 20px); color: var(--muted); margin: 10px 0 24px}
-    .headshot-wrap{position:relative; aspect-ratio:1/1; max-width:420px; margin:0 auto; border-radius:28px; padding:10px;
-      background: linear-gradient(180deg, rgba(124,249,210,0.25), rgba(0,229,255,0.15));
-      box-shadow: var(--shadow);
-    }
-    .headshot{
-      width:100%; height:100%; border-radius:24px; object-fit:cover;
-      mask-image: radial-gradient(80% 80% at 50% 45%, #000 60%, transparent 100%);
-      transform: translateZ(0);
-    }
-    .ring{position:absolute; inset:-8px; border-radius:32px; pointer-events:none;
-      background: conic-gradient(from 90deg, rgba(0,229,255,.7), rgba(124,249,210,.4), rgba(0,229,255,.7));
-      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-      -webkit-mask-composite: xor; mask-composite: exclude;
-      padding:2px; animation: spin 12s linear infinite;
-      opacity:.6;
-    }
-    @keyframes spin{ to{ transform: rotate(1turn) } }
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)); border:1px solid rgba(124,249,210,0.18); border-radius:var(--radius); padding:22px; box-shadow: var(--shadow)}
-    .grid{display:grid; gap:16px}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:var(--rounded);}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{filter:brightness(1.1)}
+    .container{max-width:1120px;margin:0 auto;padding:20px}
+
+    /* Top bar */
+    .nav{position:sticky;top:0;z-index:40;background:linear-gradient(180deg,rgba(240,247,255,.9),rgba(240,247,255,.6) 60%,transparent);
+      backdrop-filter: blur(6px) saturate(1.2); border-bottom:2px solid #dbeafe; padding:10px 16px; display:flex; align-items:center; justify-content:space-between}
+    .brand{display:flex; gap:12px; align-items:center; color:var(--ink);}
+    .brand-badge{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,#0ea5e9,#67e8f9); color:#021221; font-family:var(--display); border:2px solid #021221; box-shadow:2px 3px 0 #021221}
+    .nav ul{display:flex;gap:10px;margin:0;padding:0;list-style:none}
+    .nav a{padding:8px 12px;border-radius:12px;border:2px solid #021221; background:#fff; color:#021221; box-shadow:2px 3px 0 #021221; font-weight:700}
+    .nav a:hover{transform:translate(-1px,-1px)}
+
+    /* Hero: waves + sun + speedlines */
+    .hero-wrap{position:relative; overflow:hidden; border-bottom:3px solid #021221;}
+    .sky{position:absolute; inset:0; background:linear-gradient(#dbeafe,#e0f2fe 60%,transparent 60%); z-index:-2}
+    .sun{position:absolute; width:220px; height:220px; border-radius:50%; background:radial-gradient(circle at 30% 30%, #ffd166, var(--sun));
+      top:40px; right:8%; box-shadow:0 0 0 6px rgba(255,183,3,.25); animation: bob 6s ease-in-out infinite alternate}
+    .speedlines{position:absolute; inset:0; background-image: repeating-linear-gradient(120deg, rgba(2,17,33,.06) 0 4px, transparent 4px 14px); mix-blend-mode:multiply; z-index:-1; transform: translateY(-10px);}
+    @keyframes bob{to{ transform: translateY(-8px)}}
+
+    /* Waves */
+    .waves{position:absolute; left:0; right:0; bottom:-1px; height:140px; z-index:-1}
+    .wave{position:absolute; left:-10%; right:-10%; height:60px; border-radius:999px; opacity:.8; filter: drop-shadow(0 4px 0 rgba(2,17,33,.2));}
+    .wave.one{background:#67e8f9; bottom:60px; animation: drift 12s ease-in-out infinite alternate}
+    .wave.two{background:#38bdf8; bottom:28px; animation: drift 14s ease-in-out infinite alternate-reverse}
+    .wave.three{background:#0ea5e9; bottom:0; animation: drift 16s ease-in-out infinite alternate}
+    @keyframes drift{from{ transform: translateX(-2%) } to{ transform: translateX(2%) }}
+
+    /* Hero content */
+    .hero{display:grid; grid-template-columns: 1.15fr .85fr; gap:20px; align-items:center; padding:64px 20px 80px}
+    @media (max-width: 980px){ .hero{ grid-template-columns:1fr; padding:40px 16px 80px } }
+    h1{font-family:var(--display); font-size: clamp(40px, 7vw, 84px); line-height:.95; margin:.1em 0 .1em; letter-spacing:1.5px; text-shadow:2px 3px 0 #021221}
+    .tag{display:inline-block; background:#fff; color:#021221; border:2px solid #021221; border-radius:999px; padding:8px 12px; font-weight:800; box-shadow:2px 3px 0 #021221; }
+    p.lead{font-size: clamp(16px,2.2vw,20px); color:#213146; margin:12px 0 20px}
+    .actions{display:flex; gap:12px; flex-wrap:wrap}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:14px; background:#fff; border:2px solid #021221; box-shadow:3px 4px 0 #021221; color:#021221; font-weight:900; text-transform:uppercase; letter-spacing:.6px}
+    .btn.red{ background:var(--accent); color:#fff; border-color:#021221; box-shadow:3px 4px 0 #021221}
+    .btn:hover{ transform: translate(-1px,-1px) }
+
+    /* Wanted poster card */
+    .wanted{background: var(--sand); border: 3px solid #2b1c0f; color:#2b1c0f; border-radius: 14px; padding:16px; box-shadow: 4px 6px 0 #2b1c0f; text-align:center}
+    .wanted h3{font-family:var(--display); font-size:28px; letter-spacing:3px; margin:2px 0 6px}
+    .wanted .poster{background:#fff5d6; border:3px solid #2b1c0f; padding:10px; border-radius:10px}
+    .wanted img{width:100%; border-radius:8px; border:2px solid #2b1c0f}
+    .wanted .cap{font-family:var(--mono); font-size:12px; opacity:.8; margin-top:6px}
+    .caption{font-weight:800; letter-spacing:.6px}
+
+    /* Sections */
     .section{padding:26px 0}
-    h2.section-title{font-family:var(--display); font-size:14px; letter-spacing:1.8px; text-transform:uppercase; color:var(--muted); margin:0 0 12px}
-    .skills{grid-template-columns: repeat(auto-fit, minmax(220px,1fr));}
-    .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(124,249,210,0.10);border:1px solid rgba(124,249,210,0.25); padding:8px 12px;border-radius:999px;font-size:14px;font-family:var(--mono)}
-    .timeline{display:grid;gap:12px}
-    .item h3{margin:0;font-size:18px}
-    .item .meta{color:var(--muted);font-size:14px}
-    .projects{grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));}
-    .project h3{margin:10px 0 6px}
-    .project p{color:var(--muted);margin:0 0 8px}
-    .footer{padding:20px 0 40px;color:var(--muted);font-size:14px;text-align:center}
-    .kbd{font-family:var(--mono);font-size:12px;background:rgba(124,249,210,0.18);padding:2px 6px;border-radius:6px;border:1px solid rgba(124,249,210,0.25)}
-    .split{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
-    @media (max-width:900px){ .split{grid-template-columns:1fr} }
-    .contact{display:grid;gap:10px}
-    .contact a{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
-    .badge{display:inline-block;font-weight:800;font-size:12px;letter-spacing:.8px;padding:6px 10px;border-radius:999px;color:#041018;background:linear-gradient(135deg,var(--brand),var(--accent)); font-family:var(--display)}
-    .list-plain{margin:0;padding:0;list-style:none;display:grid;gap:8px}
-    .muted{color:var(--muted)}
-    .mono{font-family:var(--mono)}
-    .tilt{transform: perspective(900px) rotateX(0) rotateY(0); transition: transform .2s ease}
-    .tilt:hover{ transform: perspective(900px) rotateX(2deg) rotateY(-2deg) translateY(-2px) }
-    /* reveal */
-    [data-reveal]{ opacity:0; transform: translateY(14px) scale(.98); transition: opacity .6s ease, transform .6s ease }
-    .reveal-in{ opacity:1; transform: none }
-    @media (prefers-reduced-motion: reduce){
-      .blob,.ring,.tilt:hover,[data-reveal]{ animation:none !important; transition:none !important }
-    }
+    h2.section-title{font-family:var(--display); font-size:24px; letter-spacing:2px; margin:0 0 12px; text-shadow:1px 2px 0 #021221; color:#031835}
+    .grid{display:grid; gap:14px}
+    .skills{grid-template-columns: repeat(auto-fit, minmax(240px,1fr));}
+    .card{background:#fff; border:2px solid #021221; border-radius:16px; padding:18px; box-shadow:3px 4px 0 #021221}
+    .pill{display:inline-flex; align-items:center; gap:8px; background:#f1f5f9; border:2px solid #021221; padding:8px 12px; border-radius:999px; font-size:14px; font-family:var(--mono)}
+
+    .timeline .item h3{margin:0;font-size:18px}
+    .timeline .meta{color:#475569; font-size:14px}
+
+    .projects{grid-template-columns: repeat(auto-fit, minmax(260px,1fr));}
+    .project h3{margin:6px 0}
+    .project p{color:#475569; margin:0 0 8px}
+
+    .footer{padding:20px 0 40px; color:#334155; font-size:14px; text-align:center}
+
+    /* Halftone overlay (subtle) */
+    .halftone{position:absolute; inset:-20%; pointer-events:none; background-image: radial-gradient(#021221 1px, transparent 1px); background-size: 6px 6px; opacity:.06; mix-blend-mode:multiply}
   </style>
 </head>
 <body>
-  <div class="bg">
-    <div class="blob one"></div>
-    <div class="blob two"></div>
-  </div>
-
   <header class="nav">
-    <a href="#" class="brand">
-      <span class="brand-badge">NC</span>
-      <span>Nikhil Chaudhary</span>
-    </a>
+    <a class="brand" href="#"><span class="brand-badge">NC</span> <strong>Nikhil Chaudhary</strong></a>
     <nav aria-label="Primary">
       <ul>
         <li><a href="#about">About</a></li>
@@ -149,35 +117,52 @@
     </nav>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <div data-reveal>
-        <div class="tagline">AI/ML • Full-Stack • Cloud</div>
-        <h1>Future‑ready products, powered by data.</h1>
-        <p class="lead">I'm Nikhil, an AI/ML engineer and full‑stack dev blending modern ML with pragmatic software engineering. I craft robust, user‑focused systems with a dash of neon.</p>
-        <div class="actions" style="display:flex;gap:12px;flex-wrap:wrap">
-          <a class="btn tilt" href="./assets/Nikhil_Resume.pdf" download>Download résumé</a>
-          <a class="btn ghost tilt" href="#projects">See projects</a>
-        </div>
-        <p class="muted mono" style="margin-top:14px">Open to AI/ML Engineer • Data Scientist • Software Engineer roles & internships.</p>
-      </div>
-      <aside class="headshot-wrap tilt" data-reveal aria-label="Portrait">
-        <span class="ring" aria-hidden="true"></span>
-        <img class="headshot" src="./assets/headshot.jpeg" alt="Portrait of Nikhil Chaudhary">
-      </aside>
-    </section>
+  <div class="hero-wrap">
+    <div class="sky"></div>
+    <div class="speedlines"></div>
+    <div class="sun"></div>
+    <div class="waves">
+      <div class="wave one"></div>
+      <div class="wave two"></div>
+      <div class="wave three"></div>
+    </div>
+    <div class="halftone"></div>
 
-    <section id="about" class="section" data-reveal>
+    <main class="container hero">
+      <section>
+        <span class="tag">AI/ML • Full‑Stack • Cloud</span>
+        <h1>Set Sail for <span style="color:#ef4444">Data‑Driven</span> Adventures!</h1>
+        <p class="lead">I'm Nikhil, an AI/ML engineer and full‑stack developer. I build reliable, user‑centered products—charting a steady course through messy data, model ops, and clean interfaces.</p>
+        <div class="actions">
+          <a class="btn red" href="./assets/Nikhil_Resume.pdf" download>Download Résumé</a>
+          <a class="btn" href="#projects">View Projects</a>
+        </div>
+        <p style="margin:10px 0 0; color:#213146; font-weight:700">Open to AI/ML Engineer • Data Scientist • Software Engineer roles.</p>
+      </section>
+
+      <aside class="wanted">
+        <h3>WANTED</h3>
+        <div class="poster">
+          <img src="./assets/headshot.jpg" alt="Portrait of Nikhil (placeholder)">
+          <div class="cap">Skill Bounty: AI/ML • Full‑Stack • Cloud</div>
+        </div>
+        <p class="caption">REWARD: Exceptional products delivered on time ⚓</p>
+      </aside>
+    </main>
+  </div>
+
+  <div class="container">
+    <section id="about" class="section">
       <h2 class="section-title">About</h2>
       <div class="card">
-        <p>AI/ML professional with proven expertise in advanced data analysis, deep learning, and software engineering. Skilled in Python, TypeScript, and cloud platforms, I deliver robust data-driven solutions to complex business challenges. I enjoy transforming messy real-world data into reliable, production-ready features and models.</p>
+        <p>AI/ML professional with proven expertise in advanced data analysis, deep learning, and software engineering. Skilled in Python, TypeScript, and cloud platforms, I deliver robust data‑driven solutions to complex business challenges. I like turning “uncharted waters” into reliable systems that ship.</p>
       </div>
     </section>
 
-    <section id="skills" class="section" data-reveal>
+    <section id="skills" class="section">
       <h2 class="section-title">Skills</h2>
       <div class="grid skills">
-        <div class="card tilt">
+        <div class="card">
           <h3>Programming & Dev</h3>
           <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px">
             <span class="pill">Python</span>
@@ -194,12 +179,12 @@
             <span class="pill">Git • CI/CD</span>
           </div>
         </div>
-        <div class="card tilt">
+        <div class="card">
           <h3>AI/ML & Data Science</h3>
           <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px">
             <span class="pill">PyTorch</span>
             <span class="pill">TensorFlow</span>
-            <span class="pill">scikit-learn</span>
+            <span class="pill">scikit‑learn</span>
             <span class="pill">pandas • NumPy</span>
             <span class="pill">Graph analytics (Neo4j)</span>
             <span class="pill">GNNs</span>
@@ -211,32 +196,32 @@
       </div>
     </section>
 
-    <section id="experience" class="section" data-reveal>
+    <section id="experience" class="section">
       <h2 class="section-title">Experience</h2>
-      <div class="timeline">
-        <article class="card item tilt">
-          <h3>Software Developer • <span class="muted">South Dakota State University</span></h3>
+      <div class="timeline grid">
+        <article class="card item">
+          <h3>Software Developer • <span style="color:#334155">South Dakota State University</span></h3>
           <div class="meta">Sept 2024 — Present • SD, USA</div>
-          <ul class="list-plain">
+          <ul>
             <li>Developed a custom water tank CAD analysis software for Maguire Iron.</li>
             <li>Collaborated with faculty and researchers to enhance analysis accuracy and UX.</li>
           </ul>
         </article>
 
-        <article class="card item tilt">
-          <h3>Software Developer Engineer • <span class="muted">Siemens Technologies</span></h3>
+        <article class="card item">
+          <h3>Software Developer Engineer • <span style="color:#334155">Siemens Technologies</span></h3>
           <div class="meta">Jul 2022 — Jul 2024 • Gurgaon, India</div>
-          <ul class="list-plain">
-            <li>Full-stack dev on a cloud app optimizing water supply using prices, plant data, and demand forecasts.</li>
+          <ul>
+            <li>Full‑stack dev on a cloud app optimizing water supply using prices, plant data, and demand forecasts.</li>
             <li>Led AngularJS → Angular 14 migration of legacy codebase.</li>
             <li>Performance tuning that drove customer adoption & retention.</li>
           </ul>
         </article>
 
-        <article class="card item tilt">
-          <h3>Data Science Intern • <span class="muted">HighRadius</span></h3>
+        <article class="card item">
+          <h3>Data Science Intern • <span style="color:#334155">HighRadius</span></h3>
           <div class="meta">Dec 2020 — Jun 2021 • Bhubaneswar, India</div>
-          <ul class="list-plain">
+          <ul>
             <li>Mined insights from large structured & unstructured datasets.</li>
             <li>Built feature pipelines and applied ML for financial metric prediction.</li>
           </ul>
@@ -244,39 +229,39 @@
       </div>
     </section>
 
-    <section id="projects" class="section" data-reveal>
+    <section id="projects" class="section">
       <h2 class="section-title">Projects</h2>
       <div class="grid projects">
-        <article class="card project tilt">
-          <span class="badge">Cloud • Optimization</span>
+        <article class="card project">
+          <span class="tag">Cloud • Optimization</span>
           <h3>SIWA OPTIM — Siemens Water</h3>
-          <p>Cloud app to optimize pump schedules using dynamic electricity prices, demand forecasts, and plant telemetry.</p>
-          <a href="#" aria-disabled="true" class="muted">Private work • demo on request</a>
+          <p>Cloud app to optimize pump schedules with dynamic electricity prices, demand forecasts, and plant telemetry.</p>
+          <a href="#" aria-disabled="true">Private work • demo on request</a>
         </article>
 
-        <article class="card project tilt">
-          <span class="badge">Android • Sports</span>
+        <article class="card project">
+          <span class="tag">Android • Sports</span>
           <h3>Sports Fusion</h3>
           <p>Fantasy sports Android app for PAMC @ Siemens India.</p>
-          <a href="#" aria-disabled="true" class="muted">Private work • demo on request</a>
+          <a href="#" aria-disabled="true">Private work • demo on request</a>
         </article>
 
-        <article class="card project tilt">
-          <span class="badge">Kaggle • Vision</span>
+        <article class="card project">
+          <span class="tag">Kaggle • Vision</span>
           <h3>Petals to Metals — Flower Classification</h3>
           <p>Image classification on a large flower dataset using InceptionV3.</p>
           <a href="https://www.kaggle.com/badasss/petals-to-metal-1-incv3" target="_blank" rel="noopener">View Kaggle</a>
         </article>
 
-        <article class="card project tilt">
-          <span class="badge">Vision • DNN</span>
+        <article class="card project">
+          <span class="tag">Vision • DNN</span>
           <h3>Traffic Sign Recognition</h3>
           <p>Multi-class traffic sign classifier with deep neural networks.</p>
           <a href="https://github.com/Bad33/crispy-octo-dollop/blob/master/DNN.ipynb" target="_blank" rel="noopener">View on GitHub</a>
         </article>
 
-        <article class="card project tilt">
-          <span class="badge">Hackathon • ML</span>
+        <article class="card project">
+          <span class="tag">Hackathon • ML</span>
           <h3>Adopt a Buddy — Pet Classification</h3>
           <p>Animal type & breed prediction from physical attributes.</p>
           <a href="https://www.kaggle.com/badasss/hackerearth-ml-challange-adopt-a-buddy" target="_blank" rel="noopener">View Kaggle</a>
@@ -284,68 +269,46 @@
       </div>
     </section>
 
-    <section id="education" class="section" data-reveal>
+    <section id="education" class="section">
       <h2 class="section-title">Education</h2>
       <div class="grid">
-        <div class="card tilt">
+        <div class="card">
           <h3>Master’s, Computer Science</h3>
           <div class="meta">South Dakota State University • Aug 2024 — Present</div>
         </div>
-        <div class="card tilt">
+        <div class="card">
           <h3>B.Tech, Computer Science & Engineering</h3>
           <div class="meta">KIIT University • Jul 2017 — Aug 2021</div>
         </div>
       </div>
     </section>
 
-    <section class="section" data-reveal>
-      <h2 class="section-title">Certifications & Highlights</h2>
-      <div class="grid">
-        <div class="card tilt">
-          <ul class="list-plain">
-            <li><strong>Python 101 for Data Science</strong> — CognitiveClass (PY0101EN)</li>
-            <li><strong>HackerRank: Python (Basic)</strong> — <a href="https://www.hackerrank.com/certificates/55256e1bbb87" target="_blank" rel="noopener">View certificate</a></li>
-            <li>AI/ML Workshop on Coronavirus (2020)</li>
-            <li>Ethical Hacking Workshop — IIT Kharagpur (2018)</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section" data-reveal>
+    <section class="section" id="contact">
       <h2 class="section-title">Contact</h2>
-      <div class="card contact tilt">
-        <div>
-          <a href="mailto:chaudharyn582@gmail.com" class="pill" aria-label="Email"><span aria-hidden="true">✉️</span>chaudharyn582@gmail.com</a>
-        </div>
-        <div>
-          <a href="tel:+16055928818" class="pill" aria-label="Phone"><span aria-hidden="true">📞</span>+1 (605) 592-8818</a>
-        </div>
-        <div>
-          <a href="https://www.linkedin.com/in/nikhilchaudhary14ry" target="_blank" rel="noopener" class="pill" aria-label="LinkedIn"><span aria-hidden="true">🔗</span>LinkedIn</a>
-          <a href="https://github.com/Bad33" target="_blank" rel="noopener" class="pill" aria-label="GitHub"><span aria-hidden="true">💻</span>GitHub</a>
-          <a href="https://www.kaggle.com/badasss" target="_blank" rel="noopener" class="pill" aria-label="Kaggle"><span aria-hidden="true">📊</span>Kaggle</a>
-        </div>
-        <p class="muted mono">Prefer email. I usually reply within a day.</p>
+      <div class="card">
+        <p><strong>Email:</strong> <a href="mailto:chaudharyn582@gmail.com">chaudharyn582@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+16055928818">+1 (605) 592-8818</a></p>
+        <p><strong>Links:</strong> <a href="https://www.linkedin.com/in/nikhilchaudhary14ry" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/Bad33" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.kaggle.com/badasss" target="_blank" rel="noopener">Kaggle</a></p>
+        <p style="color:#475569">Prefer email. I usually reply within a day.</p>
       </div>
     </section>
 
     <footer class="footer">
-      <p>© <span id="y"></span> Nikhil Chaudhary • Built with clean HTML/CSS • <span class="kbd">CTRL</span> + <span class="kbd">K</span> to jump.</p>
+      <p>© <span id="y"></span> Nikhil Chaudhary • Built with clean HTML/CSS • <span style="font-family:var(--mono)">CTRL</span> + <span style="font-family:var(--mono)">K</span> to jump.</p>
     </footer>
-  </main>
+  </div>
 
   <script>
-    // year
+    // Year
     document.getElementById("y").textContent = new Date().getFullYear();
-    // smooth scroll
+    // Smooth-scroll
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener("click",(e)=>{
         const id=a.getAttribute("href").slice(1); const el=document.getElementById(id);
         if(el){ e.preventDefault(); el.scrollIntoView({behavior:"smooth"}) }
       });
     });
-    // quick jump
+    // Quick jump
     const sections = ["about","skills","experience","projects","education","contact"];
     document.addEventListener("keydown",(e)=>{
       if((e.ctrlKey||e.metaKey) && e.key.toLowerCase()==="k"){
@@ -354,11 +317,6 @@
         if(id && sections.includes(id.toLowerCase())) document.getElementById(id).scrollIntoView({behavior:"smooth"});
       }
     });
-    // reveal on scroll
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('reveal-in'); io.unobserve(e.target);} });
-    }, {threshold:0.14});
-    document.querySelectorAll("[data-reveal]").forEach(el=> io.observe(el));
   </script>
 </body>
 </html>
